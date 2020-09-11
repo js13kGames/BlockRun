@@ -1,0 +1,5 @@
+cuadricula 3*3
+
+controles 123 456 789
+
+estatus se guarda localStorage puntaj
