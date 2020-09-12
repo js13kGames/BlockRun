@@ -1,5 +1,5 @@
 var jugador = document.getElementById("character");
-var block = document.getElementById("block");
+var block = document.getElementById("block1");
 var counter=0;
 
 
@@ -16,10 +16,12 @@ var checkDead = setInterval(function() {
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
         block.style.animation = "none";
         alert("Game Over. score: "+Math.floor(counter/100));
+        localStorage.setItem("Player",Math.floor(counter/100));
         counter=0;
         block.style.animation = "block 1s infinite linear";
     }else{
         counter++;
+        document.getElementById("scorelocal").innerHTML = localStorage.getItem("Player");
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 }, 10);
