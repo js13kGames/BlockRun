@@ -5,7 +5,7 @@
 }
 .game{
     width: 500px;
-    height: 250px;
+    height: 200px;
     border: 1px solid black;
     margin: auto;
 }
@@ -17,42 +17,49 @@
     top: 150px;
 }
 .animate{
-    animation: jump 0.5s linear;
-}
-@keyframes jump{
-    0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 266px;}
-    100%{top: 380px;}
+    animation: jump 0.3s linear;
 }
 
-/*bloque*/
-
-#block1{
-    background-color: blue;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 170px;
-    left: 500px;
-    animation: block 1s infinite linear;
-}
-
-/*bloque salto */
-
-#block{
+#pad{
     background-color: blue;
     width: 100px;
     height: 10px;
     position: relative;
-    top: 100px;
+    top: 80px;
     left: 500px;
-    animation: block 1.3s infinite linear;
+    animation: pad 1.6s infinite linear;
 }
-
+#point{
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 00px;
+    left: 500px;
+    animation: pad 3s infinite linear;
+}
+#obj{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: block 0.8s infinite linear;
+}
 @keyframes block{
     0%{left: 500px}
-    100%{left: -20px}
+    100%{left: -30px}
+}
+@keyframes pad{
+    0%{left: 530px}
+    100%{left: -100px}
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
 }
 p{
     text-align: center;

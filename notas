@@ -1,5 +1,7 @@
-cuadricula 3*3
+var checkPad = setInterval(function(){
+    let characterTop = parseInt(window.getComputedStyle(jugador).getPropertyValue("top"));
+    let blockLeft = parseInt(window.getComputedStyle(pad).getPropertyValue("left"));
+    if(blockLeft<100 && blockLeft>-100 && characterTop>=130){
 
-controles 123 456 789
-
-estatus se guarda localStorage puntaj
+    }
+});
